@@ -18,9 +18,7 @@ def main():
     """ Calls instances of blender with script that will bake.  """
 
     args = parse()
-    counter_file = tempfile.NamedTemporaryFile(mode='r')
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    blender_script = current_dir + "/bpy_bake.py"
+    blender_script = "./bpy_bake.py"
 
     while True:
         try:
