@@ -51,7 +51,7 @@ def set_bake_settings():
     bake.margin = 0
 
     # high memory consumtion - recommend to use cpu
-    C.scene.cycles.device = 'CPU'
+    bpy.context.scene.cycles.device = 'CPU'
 
 if __name__ == "__main__":
     # New image settings:
