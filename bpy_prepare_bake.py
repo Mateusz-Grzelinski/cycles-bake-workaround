@@ -21,15 +21,18 @@ def set_image_in_materials(img_name, resolution):
     """ Adds texture node in every material and selects it """
     img = bpy.data.images.new(name=img_name, width=resolution, height=resolution)
 
+    materials = set()
     for obj in bpy.context.selected_objects:
         for slot in obj.material_slots:
-            material = slot.material
-            nodes = material.node_tree.nodes
-            node = nodes.new('ShaderNodeTexImage')
-            node.location = 0, 600
-            node.image = img
-            node.select = True
-            nodes.active = node
+            materials.add(slot.material)
+
+    for material in materials:
+        nodes = material.node_tree.nodes
+        node = nodes.new('ShaderNodeTexImage')
+        node.location = 0, 0
+        node.image = img
+        node.select = True
+        nodes.active = node
 
     # pack image with blender file (or save externally) or it will be deleted
     # img.filepath = '/' + img_name
