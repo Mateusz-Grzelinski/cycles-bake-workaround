@@ -35,7 +35,7 @@ def bake_sequentially(file_path):
     img = objects[current_index].active_material.node_tree.nodes.active.image
 
     # bake save & cleanup
-    bpy.ops.object.bake_image()
+    bpy.ops.object.bake(type='DIFFUSE')
     img.save()
 
     with open(file_path, 'w') as f:
