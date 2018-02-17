@@ -57,5 +57,5 @@ if __name__ == "__main__":
     index = bake_sequentially(argv[0])
 
     print("Baking single object done. Tmp file: " + argv[0]
-          + " Index: " + index
+          + " Index: " + str(index)
           + '\n\n\n\n')
