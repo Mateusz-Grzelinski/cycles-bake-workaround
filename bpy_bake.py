@@ -1,6 +1,6 @@
 """
 author: Mateusz Grzeliński
-email: gmati2@wp.pl
+Blender Cycles 2.79
 Problem:
     Blender cycles uses too much memory when baking multiple objects
 Solution (workaround):
@@ -44,6 +44,7 @@ def bake_sequentially(file_path):
         f.write(str(total_len))
 
     return current_index
+
 
 if __name__ == "__main__":
     argv = sys.argv
