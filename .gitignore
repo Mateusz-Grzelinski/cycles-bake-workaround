@@ -1,4 +1,5 @@
 *.blend
 *.png
 *.jpg
-.blender_bake_tmp
+test_files
+
