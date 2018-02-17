@@ -18,6 +18,7 @@ def main():
     """ Calls instances of blender with script that will bake.  """
 
     args = parse()
+    counter_file = tempfile.NamedTemporaryFile(mode='r')
     blender_script = "./bpy_bake.py"
 
     while True:
