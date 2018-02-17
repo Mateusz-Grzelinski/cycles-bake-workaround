@@ -17,7 +17,9 @@ Those 2 files should be in the same directory.
 bpy_* file are meant to be used inside blender.
 [Sequential_bake_main.py](./sequential_bake_main.py) calls
 [bpy_bake.py](./bpy_bake.py) with command 
-```blener /path/to/my_file.blend --background --python /abs/path/to/bpy_bake.py -- /path/to/tempfile```
+```
+blener /path/to/my_file.blend --background --python ./bpy_bake.py -- /path/to/tempfile
+```
 Tempfile is used to communicate to sequential_bake_main.py when to stop calling
 instances of blender
 
