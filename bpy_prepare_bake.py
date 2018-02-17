@@ -20,6 +20,10 @@ import bpy
 def set_image_in_materials(img_name, resolution):
     """ Adds texture node in every material and selects it """
     img = bpy.data.images.new(name=img_name, width=resolution, height=resolution)
+    img.file_format = 'PNG'
+    img.use_alpha = False
+    img.filepath = '//' + img_name
+    img.save()
 
     materials = set()
     for obj in bpy.context.selected_objects:
@@ -34,11 +38,6 @@ def set_image_in_materials(img_name, resolution):
         node.select = True
         nodes.active = node
 
-    # pack image with blender file (or save externally) or it will be deleted
-    # img.filepath = '/' + img_name
-    # img.save()
-    img.pack(as_png=True)
-    bpy.ops.wm.save_mainfile()
 
 
 def set_bake_settings():
@@ -62,5 +61,6 @@ if __name__ == "__main__":
     resolution = 1024 * 4
     set_image_in_materials(img_name, resolution)
     set_bake_settings()
+    bpy.ops.wm.save_mainfile()
 
 # bpy.ops.object.bake_image()
