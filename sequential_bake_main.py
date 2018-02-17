@@ -42,6 +42,8 @@ def main():
 
     counter_file.close()
 
+    print("SUCCES!! Check if bake is correct.")
+
 
 if __name__ == '__main__':
     main()
