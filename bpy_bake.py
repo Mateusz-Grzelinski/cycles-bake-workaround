@@ -35,13 +35,16 @@ def bake_sequentially(file_path):
     img = objects[current_index].active_material.node_tree.nodes.active.image
 
     # bake save & cleanup
-    bpy.ops.object.bake(type='DIFFUSE')
-    img.save()
-
-    with open(file_path, 'w') as f:
-        total_len = len(objects)
-        f.write(str(current_index + 1) + '\n')
-        f.write(str(total_len))
+    if bpy.ops.object.bake(type='DIFFUSE') == {'FINISHED'}:
+        print("saving...")
+        img.save()
+        with open(file_path, 'w') as f:
+            total_len = len(objects)
+            f.write(str(current_index + 1) + '\n')
+            f.write(str(total_len))
+    else:
+        with open(file_path, 'w') as f:
+            pass  # Clear file - causes exception in main file 
 
     return current_index
 
@@ -54,7 +57,7 @@ if __name__ == "__main__":
     else:
         argv = argv[argv.index("--") + 1:]
 
-    index = bake_sequentially(argv[0])
+    index = bake_sequentially(argv[0])  # argv[0] should pe path to file
 
     print("Baking single object done. Tmp file: " + argv[0]
           + " Index: " + str(index)
