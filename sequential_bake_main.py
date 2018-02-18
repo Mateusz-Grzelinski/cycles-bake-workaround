@@ -1,4 +1,4 @@
-#!/usr/bin/python
+6#!/usr/bin/python
 
 import sys
 import argparse
@@ -24,7 +24,7 @@ def main():
     while True:
         try:
             os.system("blender " + args.file +
-                      " --background --python " +
+                      " --background --factory-startup --python " +
                       blender_script + " -- " +
                       counter_file.name + " ")
         except OSError as e:
@@ -43,6 +43,7 @@ def main():
     counter_file.close()
 
     print("SUCCES!! Check if bake is correct.")
+    print("Baked from file: ", args.file)
 
 
 if __name__ == '__main__':
