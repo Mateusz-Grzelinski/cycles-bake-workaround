@@ -15,7 +15,7 @@ baked. One by one.
 # Usage & examples
 Files [sequential_bake_main.py](./sequential_bake_main) and [bpy_bake.py](./bpy_bake.py) sould be in the same folder.
 
-bpy_* file are meant to be used inside blender.
+bpy_* files are meant to be used inside blender.
 
 [Bpy_prepare_bake.py](./bpy_prepare_bake.py) is used to automate preparation for baking. Look inside for details.
 
