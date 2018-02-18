@@ -25,6 +25,8 @@ bpy_* files are meant to be used inside blender.
 blener /path/to/my_file.blend --background --factory-startup --python ./bpy_bake.py -- /path/to/tempfile
 ```
 Tempfile is used to communicate to [sequential_bake_main.py](./sequential_bake_main.py) when to stop calling instances of blender (created automatically)
+# Contact
+Post an issue.
 
 Examples:
 1. Bake selected object in file: `"/path/to/file.blend"` (remember to properly escape path)
