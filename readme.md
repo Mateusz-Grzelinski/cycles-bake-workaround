@@ -22,7 +22,7 @@ bpy_* files are meant to be used inside blender.
 [Sequential_bake_main.py](./sequential_bake_main.py) calls
 [bpy_bake.py](./bpy_bake.py) with command 
 ```
-blender /path/to/my_file.blend --background --factory-startup --python ./bpy_bake.py -- /path/to/tempfile
+blender /path/to/my_file.blend --background --factory-startup --python ./bpy_bake.py -- 
 ```
 Tempfile is used to communicate to [sequential_bake_main.py](./sequential_bake_main.py) when to stop calling instances of blender (created automatically)
 
