@@ -1,5 +1,8 @@
 # Blender cycles bake high memory usage workaround
 
+## Update
+This problem has been arleady solved
+
 ## Problem
 Cycles baking process consumes too much memory, especially when it comes to
 baking __multiple objects__, that can not be joined together into one.
