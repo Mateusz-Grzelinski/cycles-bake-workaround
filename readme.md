@@ -1,3 +1,5 @@
+I faced this problem in Blender 2.7 series, this will not work in Blender 2.8, because of api changes
+
 # Blender cycles bake high memory usage workaround
 
 ## Update
