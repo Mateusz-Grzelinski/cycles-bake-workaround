@@ -1,9 +1,6 @@
-I faced this problem in Blender 2.7 series, this probably will not work in Blender 2.8, because of api changes and general changes to balke handling (not tested).
+I faced this problem in Blender 2.7 series, it has been probably solved arleady by developers. This code is probably not relevant in 2.8 series
 
 # Blender cycles bake high memory usage workaround
-
-## Update
-This problem has been arleady solved
 
 ## Problem
 Cycles baking process consumes too much memory, especially when it comes to
