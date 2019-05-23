@@ -1,4 +1,4 @@
-I faced this problem in Blender 2.7 series, this will not work in Blender 2.8, because of api changes
+I faced this problem in Blender 2.7 series, this probably will not work in Blender 2.8, because of api changes and general changes to balke handling (not tested).
 
 # Blender cycles bake high memory usage workaround
 
